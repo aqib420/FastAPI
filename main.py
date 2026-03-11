@@ -57,7 +57,7 @@ def sort_patients(sortBy:str = Query(..., description='Sort on the basis of heig
     data = load_data()
     sort_order = True if orderBy=='desc' else False
     sorted_data = sorted(data.values(), key=lambda x:x.get(sortBy,0), reverse=sort_order)
-
+    
     return sorted_data
       
 
